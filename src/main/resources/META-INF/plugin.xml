@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.jolt.plugin</id>
+    <name>Jolt AI</name>
+    <vendor email="hello@usejolt.ai" url="https://www.usejolt.ai">Jolt AI</vendor>
+    <description>
+        <![CDATA[
+            <h2>Jolt AI: AI for 100K+ Line Codebases</h2>
+
+            <p>Jolt is your instant codebase expert. It's an AI codegen and chat tool for 100k to multi-million line codebases that:</p>
+            <ul>
+                <li>Automatically identifies context files</li>
+                <li>Generates coherent, multi-file code changes</li>
+                <li>Matches your code style</li>
+            </ul>
+
+            <h3>What can you do with Jolt?</h3>
+            <ul>
+                <li>Understand any codebase</li>
+                <li>Ship features faster</li>
+                <li>Identify and fix bugs</li>
+                <li>Onboard new developers</li>
+                <li>Write documentation</li>
+                <li>Code refactoring</li>
+            </ul>
+
+            <h3>Documentation</h3>
+            <p>
+                Check out our <a href="https://docs.usejolt.ai" target="_blank" rel="noopener">documentation</a> to learn more about Jolt
+            </p>
+
+            <h3>Support and Feedback</h3>
+            <p>
+                Need help or have questions? Contact us at <a href="mailto:support@usejolt.ai">support@usejolt.ai</a>
+            </p>
+        ]]>
+    </description>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow icon="/META-INF/pluginIcon.svg" id="Jolt AI" factoryClass="com.jolt.plugin.ui.JoltToolFactoryWindow" anchor="left" />
+        <postStartupActivity implementation="com.jolt.plugin.core.JoltProjectActivity" />
+    </extensions>
+    <applicationListeners>
+        <listener class="com.jolt.plugin.core.JoltProjectManagerListener" topic="com.intellij.openapi.project.ProjectManagerListener"/>
+        <listener class="com.jolt.plugin.core.JoltApplicationLifecycleListener" topic="com.intellij.ide.AppLifecycleListener"/>
+    </applicationListeners>
+</idea-plugin>
