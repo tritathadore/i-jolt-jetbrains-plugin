@@ -1,0 +1,33 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# IDEs and editors
+.idea
+.vscode
+
+build
+.gradle
+.idea
+.kotlin
+out
+src/main/resources/daemon.mjs
+src/main/resources/web/css/index.css
+src/main/resources/web/index.js
+jetbrains-bridge.iml
+
+# dotenv environment variables file
+*.env
+
+# next.js build output
+.next
+
+# OS X temporary files
+.DS_Store
